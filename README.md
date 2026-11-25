@@ -26,6 +26,7 @@
 ```
 my-agent-brain/
 ├── AGENTS.md                    读写协议（核心）
+├── NOW.example.md               当前状态一页纸模板
 ├── identity/                    我是谁
 │   ├── who-i-am.md
 │   └── how-to-talk-to-me.md
@@ -41,6 +42,8 @@ my-agent-brain/
 │   └── projects/                项目级记忆
 └── meta/
     ├── schema.md                文件格式规范
+    ├── plan-lifetime.md         三层三副本落地方案
+    ├── steward.md               维护者与继任规则（待回答）
     ├── changelog.md             变更记录
     └── open-questions.md        待本人回答的问题
 ```
@@ -51,10 +54,12 @@ my-agent-brain/
 
 - **`active`** —— 已确认，可以照着做
 - **`draft`** —— 结构就位，内容待本人确认。**按它行动前必须先问**
+- **`unknown`** —— 明确不知道。**禁止推断填充**，需要就问
 - **`superseded`** —— 已被取代，只作历史参考
 
-当前 `AGENTS.md`、`meta/schema.md`、`do-not/never.md` 是 `active`；
-`identity/` 和 `working-style/` 下多数是 `draft`，空槽待填。
+当前 `AGENTS.md`、`meta/schema.md`、`meta/plan-lifetime.md`、`do-not/never.md` 是 `active`；
+`identity/` 和 `working-style/` 下多数是 `draft`，空槽待填；
+`meta/steward.md` 是 `unknown`——它问的是「谁有权改、你不管了谁接手」，只有你能答。
 
 ## 怎么让它变准
 
